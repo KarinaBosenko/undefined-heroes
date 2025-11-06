@@ -32,10 +32,6 @@
 .text-about {
   text-align: left;
 }
-@media (min-width: 768px) {
-  .about-us-title {
-  }
-}
 
 @media (min-width: 1440px) {
   .about-content {

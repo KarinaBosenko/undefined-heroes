@@ -3,55 +3,146 @@
 }
 
 .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding-bottom: 32px;
+}
+
+.footer-logo {
+    padding-bottom: 48px;
+    color: #fff;
+}
+
+.footer-nav ul {
+    flex-direction: column;
+    display: flex;
+    gap: 32px;
+}
+
+.footer-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    line-height: 1.6;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+}
+
+.footer__copyright {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    line-height: 22px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.footer__icons {
+    fill: #ffffff;
+    width: 24px;
+    height: 24px;
+}
+
+.desktop-copy {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .footer-nav ul {
+        flex-direction: row;
+        display: flex;
+        gap: 32px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .footer-logo  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 700;
+    }
+         .footer-nav ul {
+             display: flex;
+             align-items: center;
+             gap: 40px;
+         }
+    .mobile-copy {
+        display: none;
+    }
+
+    .desktop-copy {
+        display: block;
+    }
+}
+
+
+/* .footer__container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+    gap: 80px;
+}  */
 
 /* ===== ЛОГОТИП ===== */
-.footer-logo {
+/* .footer-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #ffffff;
     font-size: 24px;
     font-weight: 700;
-}
+} */
 
 
 /* ===== КОПІРАЙТ DESKTOP ===== */
-.footer__copyright.desktop-copy {
+/* .footer__copyright.desktop-copy {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.2;
     color: #fff;
     display: block;
-}
+} */
 
 /* ===== НАВІГАЦІЯ ===== */
-.footer-nav ul {
+/* .footer-nav ul {
     display: flex;
     gap: 32px;
     list-style: none;
-}
+} */
 
-.footer-link {
+/* .footer-link {
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     transition: color 0.5s;
-}
+} */
 
-.footer-link:hover,
+/* .footer-link:hover,
 .footer-link:focus {
     color: #d6bebe;
-}
+} */
 
 /* ===== СОЦІАЛЬНІ ІКОНКИ ===== */
-.footer-social ul {
+/* .footer-social ul {
     display: flex;
     gap: 20px;
     list-style: none;
@@ -75,17 +166,12 @@
     fill: #ffffff;
     width: 24px;
     height: 24px;
-}
-
-/* ===== МОБІЛЬНИЙ КОПІРАЙТ ===== */
-.mobile-copy {
-    display: none;
-}
+} */
 
 /* ================================== */
 /* ПЛАНШЕТ  */
 /* ================================== */
-@media (max-width: 1024px) {
+/* @media (min-width: 1024px) {
     .footer__container {
         flex-direction: column;
         align-items: center;
@@ -128,12 +214,12 @@
     .footer-social {
         margin-top: 20px;
     }
-}
+}  */
 
 /* ================================== */
 /* МОБИЛЬНЫЙ ТЕЛЕФОН (до 767px) */
 /* ================================== */
-@media (max-width: 767px) {
+/* @media (min-width: 767px) {
 
     .footer__container {
         flex-direction: column;
@@ -165,4 +251,4 @@
         text-align: center;
         order: 5;
     }
-}
+}  */

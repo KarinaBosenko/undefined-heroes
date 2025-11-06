@@ -1,4 +1,3 @@
-import './js/furniture-api';
 import './js/header';
 import './js/furniture-list';
 import './js/popular-products';

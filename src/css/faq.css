@@ -10,67 +10,54 @@
 .subtitle-faq {
   margin-bottom: 32px;
   text-align: center;
-  font-family: 'Raleway';
-  font-weight: 700;
+
   font-size: 36px;
-  line-height: 120%;
-  letter-spacing: 0.01em;
-  color: #080c09;
-}
-.container-faq {
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .faq-accordion {
   max-height: 1040px;
-  overflow-y: auto;
   scroll-behavior: smooth;
 }
 .faq-text {
-  font-family: 'Raleway';
-  margin-right: 24px;
-  color: #080c09;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 160%;
 }
 
 .faq-item {
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
-  overflow: hidden;
 }
 .faq-border {
   border-top: 1px solid hsla(0, 0%, 0%, 0.15);
 }
 .faq-question {
+  gap: 24px;
   width: 100%;
   background: none;
   border: none;
-  padding: 20px;
-  text-align: left;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-inline: 0;
+  align-items: center;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  color: #080c09;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
+  text-align: left;
 }
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
-  padding: 0 16px;
+
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.4;
-  color: #1e1e1e;
+  line-height: 1.6;
 }
 
 .faq-item.active .faq-answer {
   max-height: 500px;
-  padding: 8px 16px 16px 16px;
+  padding-bottom: 24px;
 }
 
 .faq-accordion,
@@ -80,13 +67,14 @@
 }
 
 .faq-arrow svg {
-  transition: transform 0.3s ease;
-  color: #1e1e1e;
+  display: block;
+  transition: transform 0.2s ease-in-out;
+  color: #080c09;
 }
 
 .faq-arrow.open svg {
   transform: rotate(180deg);
-  color: #1e1e1e;
+  color: #080c09;
 }
 
 @media screen and (min-width: 1200px) {
@@ -94,23 +82,19 @@
     padding-top: 100px;
     padding-bottom: 100px;
     scroll-margin-top: 74px;
-  }
-  .container-faq {
     max-width: 1200px;
     margin: 0 auto;
   }
+
   .subtitle-faq {
-    font-size: 64px;
-    margin-bottom: 82px;
+    font-size: 48px;
+    margin-bottom: 32px;
   }
   .faq-text {
-    font-size: 32px;
-  }
-  .faq-question {
-    font-size: 32px;
+    font-size: 18px;
   }
   .faq-answer {
-    font-size: 24px;
+    font-size: 16px;
   }
   .faq-accordion {
     max-height: 1097px;
@@ -118,6 +102,5 @@
   .faq-item {
     max-width: 900px;
     margin: 0 auto;
-    margin-bottom: 10px;
   }
 }

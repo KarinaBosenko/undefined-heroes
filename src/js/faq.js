@@ -1,11 +1,7 @@
-document.querySelectorAll('[data-faq-arrow]').forEach(arrow => {
-  arrow.addEventListener('click', e => {
-    e.stopPropagation();
-
-    const button = arrow.closest('[data-faq-question]');
+document.querySelectorAll('[data-faq-question]').forEach(button => {
+  button.addEventListener('click', e => {
+    const arrow = button.querySelector('[data-faq-arrow]');
     const faqItem = button.closest('[data-faq-item]');
-    const answer = faqItem.querySelector('[data-faq-answer]');
-
     const isOpen = arrow.classList.contains('open');
 
     document

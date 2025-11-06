@@ -21,42 +21,25 @@
   overflow: hidden;
 }
 .about-us-title {
-  color: #0d0b0a;
   font-size: 36px;
   text-align: left;
-  font-family: 'Raleway';
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: 0.01em;
 }
 .about {
   background-color: #f0e6e6;
+  padding: 64px 0px;
 }
-.container {
-  padding: 64px 20px;
-}
+
 .text-about {
-  color: #080c09;
-
   text-align: left;
-  font-family: 'Raleway';
-
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 160%;
 }
 @media (min-width: 768px) {
-  .container {
-    padding: 32px;
+  .about-us-title {
   }
 }
 
 @media (min-width: 1440px) {
   .about-content {
     flex-direction: row;
-  }
-  .container {
-    padding: 64px;
   }
   .about-us-title {
     font-size: 48px;

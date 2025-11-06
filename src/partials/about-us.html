@@ -1,0 +1,46 @@
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2 class="about-us-title">Про Меблерію</h2>
+        <p class="text-about">
+          У Меблерії ми прагнемо створювати затишок та функціональність у
+          кожному домі. Наша місія - пропонувати високоякісні меблі, що
+          поєднують у собі сучасний дизайн, довговічність та доступність. Ми
+          віримо, що ідеальний інтер'єр починається з правильних меблів.
+        </p>
+      </div>
+      <picture class="about-image">
+        <!-- Desktop -->
+        <source
+          media="(min-width: 1440px)"
+          srcset="./img/about_us/about1x.jpg 1x, ./img/about_us/about2x.jpg 2x"
+        />
+
+        <!-- Tablet -->
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./img/about_us/about_tab_1x.jpg 1x,
+            ./img/about_us/about_tab_2x.jpg 2x
+          "
+        />
+
+        <!-- Mobile -->
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./img/about_us/about_mob_1x.jpg 1x,
+            ./img/about_us/about_mob_2x.jpg 2x
+          "
+        />
+
+        <!-- Fullback image -->
+        <img
+          src="./img/about_us/about_mob_1x.jpg"
+          alt="About Us section image"
+        />
+      </picture>
+    </div>
+  </div>
+</section>

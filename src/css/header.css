@@ -15,7 +15,16 @@
   padding: 0px;
   width: 32px;
   height: 32px;
-} /* -----------HIDDEN DESKTOP STYLES------------ */
+  background-color: transparent;
+}
+
+.burger-menu-svg {
+  fill: #000000; /* або ваш колір */
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+/* -----------HIDDEN DESKTOP STYLES------------ */
 .navigation-desktop {
   display: none;
 }
@@ -55,6 +64,7 @@
   padding: 0px;
   width: 32px;
   height: 32px;
+  background-color: transparent;
 }
 .go-shopping-button-menu {
   /* display: inline-flex; */
@@ -132,6 +142,9 @@
 @media only screen and (min-width: 1440px) {
   .burger-menu {
     display: none;
+  }
+  .header-container {
+    max-width: 1312px;
   }
   .navigation-desktop {
     display: flex;

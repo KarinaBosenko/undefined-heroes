@@ -1,36 +1,15 @@
-document.querySelectorAll('[data-faq-question]').forEach(button => {
-  button.addEventListener('click', e => {
-    const arrow = button.querySelector('[data-faq-arrow]');
-    const faqItem = button.closest('[data-faq-item]');
-    const isOpen = arrow.classList.contains('open');
+import Accordion from 'accordion-js';
+//import "accordion-js/dist/accordion.min.css";
 
-    document
-      .querySelectorAll('[data-faq-item]')
-      .forEach(item => item.classList.remove('active'));
-    document
-      .querySelectorAll('[data-faq-arrow]')
-      .forEach(a => a.classList.remove('open'));
+function initialAccordion() {
+  const params = {
+    duration: 350,
+    showMultiple: false,
+    elementClass: 'accordion-item',
+    triggerClass: 'accordion-trigger',
+    panelClass: 'accordion-panel',
+    activeClass: 'accordion-active',
+  };
 
-    if (!isOpen) {
-      faqItem.classList.add('active');
-      arrow.classList.add('open');
-    }
-
-    setTimeout(updateAccordionOverflow, 300);
-  });
-});
-
-function updateAccordionOverflow() {
-  const accordion = document.querySelector('[data-faq-accordion]');
-  if (!accordion) return;
-
-  const contentHeight = accordion.scrollHeight;
-
-  if (contentHeight > 1040) {
-    accordion.style.overflowY = 'auto';
-  } else {
-    accordion.style.overflowY = 'unset';
-  }
+  return new Accordion('.accordion-list', params);
 }
-
-window.addEventListener('DOMContentLoaded', updateAccordionOverflow);

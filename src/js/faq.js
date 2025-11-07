@@ -1,5 +1,5 @@
 import Accordion from 'accordion-js';
-//import "accordion-js/dist/accordion.min.css";
+import 'accordion-js/dist/accordion.min.css';
 
 function initialAccordion() {
   const params = {
@@ -11,5 +11,18 @@ function initialAccordion() {
     activeClass: 'accordion-active',
   };
 
-  return new Accordion('.accordion-list', params);
+  const acc = new Accordion('.accordion-list', params);
+
+  // добавляем класс js-enabled, если его требует CSS
+  document
+    .querySelectorAll('.accordion-item')
+    .forEach(el => el.classList.add('js-enabled'));
+
+  return acc;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('.accordion-list')) {
+    initialAccordion();
+  }
+});

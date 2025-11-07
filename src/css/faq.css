@@ -1,4 +1,4 @@
-/*#region ===== FAQ styles ===== */
+/*FAQ styles */
 
 .section-faq {
   padding: 48px 0;
@@ -34,22 +34,33 @@
   transform: translate(0, -50%);
   transition: transform 350ms ease-in-out;
 }
+.accordion-trigger:hover {
+  color: #808080;
+}
 
+.accordion-trigger:hover .accordion-svg {
+  fill: #808080;
+  transition: fill 0.3s ease;
+}
 .accordion-item.accordion-active > .accordion-title .accordion-svg {
   transform: rotate(180deg) translate(0, 50%);
 }
 
 .accordion-trigger {
+  background: transparent;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.6;
   text-align: left;
   width: 100%;
+  cursor: pointer;
   padding: 20px 56px 20px 0;
-  display: block;
+  display: flex;
   transition: color 350ms ease-in-out;
 }
-
+.accordion-item:not(.accordion-active) .accordion-trigger {
+  color: #080c09;
+}
 .accordion-panel {
   overflow: hidden;
   transition-property: height, visibility;
@@ -91,4 +102,4 @@
   }
 }
 
-/*#endregion ===== FAQ styles ===== */
+/* FAQ styles  */

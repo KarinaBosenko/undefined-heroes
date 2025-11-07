@@ -1,0 +1,157 @@
+/**************************** Modal overlay *********************************************/
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*********************************Modal window******************************/
+.modal {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  max-height: 90%;
+  overflow-y: auto;
+  transition: opacity 250ms ease-in-out;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 48px;
+  margin: 64px 0;
+}
+
+/* ***************************form ***************************************/
+
+.order-form,
+.input-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.order-button,
+.input-group,
+.user-input,
+.user-text {
+  width: 100%;
+}
+
+.user-input,
+.user-text {
+  padding: 12px 8px;
+  background-color: rgba(8, 12, 9, 0.05);
+  border-radius: 12px;
+  border: 1px solid transparent;
+  line-height: 1.6;
+  color: rgba(8, 12, 9, 0.6);
+}
+
+.user-input:focus,
+.user-text:focus {
+  border: 1px solid rgba(8, 12, 9, 0.4);
+  outline: none;
+}
+
+.user-input::placeholder,
+.user-text::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.user-input:hover::placeholder,
+.user-text:hover::placeholder {
+  color: #080c09;
+}
+
+.user-input:focus::placeholder,
+.user-text:focus::placeholder {
+  color: transparent;
+}
+/***************** Error class ***************************/
+.user-input.error-message,
+.user.text.error-message,
+.user-input.error-message::placeholder,
+.user.text.error-message::placeholder {
+  border: 1px solid #6b0609;
+  color: #6b0609;
+}
+
+.order-form {
+  gap: 24px;
+  width: 295px;
+}
+.input-group {
+  gap: 8px;
+}
+
+.user-text {
+  height: 180px;
+  resize: none;
+}
+
+.form-lable {
+  font-weight: 400;
+}
+/******************** header ********************************/
+
+.form-header {
+  font-size: 36px;
+}
+
+/************************** button *************************/
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: transparent;
+}
+
+/************************Responsive*************************/
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .modal-body {
+    margin-bottom: 32px;
+  }
+  .order-form {
+    width: 640px;
+  }
+  .order-button {
+    width: 196px;
+    align-self: center;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .form-header {
+    font-weight: 700;
+    font-size: 48px;
+  }
+
+  .modal-body {
+    margin-bottom: 64px;
+  }
+  .order-form {
+    width: 738px;
+  }
+}

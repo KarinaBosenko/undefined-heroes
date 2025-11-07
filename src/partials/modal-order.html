@@ -1,0 +1,60 @@
+<div class="modal-overlay is-open">
+  <div class="modal container">
+    <button
+      type="button"
+      class="close-button"
+      width="32px"
+      height="32px"
+      data-modal-close
+    >
+      <svg class="close-button-icon" width="14.06px" height="14.06px">
+        <use href="./" />
+      </svg>
+    </button>
+    <div class="modal-body">
+      <h2 class="form-header">Замовити зворотний зв’язок</h2>
+      <form name="order-form" class="order-form">
+        <div class="input-group">
+          <label for="username" class="form-lable"
+            >Ім'я*</span></label
+          >
+          <input
+            class="user-input"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Дмитро"
+            autofocus
+          />
+        </div>
+        <div class="input-group">
+          <label for="user-phone" class="form-lable"
+            >Телефон*</span></label
+          >
+          <input
+            class="user-input"
+            type="tel"
+            name="user-tel"
+            id="user-phone"
+            placeholder="38 0991232211"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="form-comments" class="form-lable">Коментар</label>
+          <textarea
+            class="user-text"
+            name="textarea"
+            id="form-comments"
+            placeholder="Введіть Ваш коментар"
+            row="10"
+            maxlength="300"
+          ></textarea>
+        </div>
+        <button class="primary-btn order-button" type="submit">
+          Надіслати заявку
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

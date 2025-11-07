@@ -58,8 +58,9 @@
   display: flex;
   transition: color 350ms ease-in-out;
 }
-.accordion-item:not(.accordion-active) .accordion-trigger {
-  color: #080c09;
+.accordion-item:not(.accordion-active) .accordion-trigger:hover,
+.accordion-item:not(.accordion-active) .accordion-trigger:focus {
+  color: #808080;
 }
 .accordion-panel {
   overflow: hidden;

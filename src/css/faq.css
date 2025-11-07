@@ -1,4 +1,4 @@
-/*FAQ styles */
+/* FAQ */
 
 .section-faq {
   padding: 48px 0;
@@ -26,26 +26,6 @@
   position: relative;
 }
 
-.accordion-svg {
-  fill: #080c09;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  transition: transform 350ms ease-in-out;
-}
-.accordion-trigger:hover {
-  color: #808080;
-}
-
-.accordion-trigger:hover .accordion-svg {
-  fill: #808080;
-  transition: fill 0.3s ease;
-}
-.accordion-item.accordion-active > .accordion-title .accordion-svg {
-  transform: rotate(180deg) translate(0, 50%);
-}
-
 .accordion-trigger {
   background: transparent;
   font-weight: 700;
@@ -56,12 +36,41 @@
   cursor: pointer;
   padding: 20px 56px 20px 0;
   display: flex;
+  color: #080c09;
   transition: color 350ms ease-in-out;
 }
-.accordion-item:not(.accordion-active) .accordion-trigger:hover,
-.accordion-item:not(.accordion-active) .accordion-trigger:focus {
+
+.accordion-item:not(.accordion-active) .accordion-trigger:hover {
   color: #808080;
 }
+
+.accordion-item.accordion-active .accordion-trigger:hover {
+  color: #080c09;
+}
+
+.accordion-trigger:focus,
+.accordion-trigger:focus-visible {
+  color: #080c09;
+  outline: none;
+}
+
+.accordion-svg {
+  fill: #080c09;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 350ms ease-in-out, fill 300ms ease;
+}
+
+.accordion-item:not(.accordion-active) .accordion-trigger:hover .accordion-svg {
+  fill: #808080;
+}
+
+.accordion-item.accordion-active > .accordion-title .accordion-svg {
+  transform: rotate(180deg) translateY(50%);
+}
+
 .accordion-panel {
   overflow: hidden;
   transition-property: height, visibility;
@@ -71,6 +80,7 @@
 .accordion-item.js-enabled .accordion-panel {
   visibility: hidden;
 }
+
 .accordion-item.accordion-active .accordion-panel {
   visibility: visible;
 }
@@ -80,27 +90,21 @@
   font-size: 16px;
 }
 
-/* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .accordion-trigger {
     padding: 22px 56px 22px 0;
   }
 }
 
-/* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   .section-faq {
     padding: 80px 0;
   }
-
   .section-faq-title {
     font-size: 48px;
   }
-
   .accordion-list {
     max-width: 864px;
     margin: 0 auto;
   }
 }
-
-/* FAQ styles  */

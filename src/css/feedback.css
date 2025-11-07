@@ -1,0 +1,73 @@
+/* Базові стилі (mobile first) - Mobile: 375px+ */
+.feedback-slider {
+  /* overflow: hidden; */
+}
+
+/* Tablet: 768px+ */
+@media (min-width: 768px) {
+  .feedback-section .container {
+  }
+}
+
+/* Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .feedback-section .container {
+  }
+}
+
+.star-rating {
+  /*шрифт та напрямку для  зірок */
+  display: inline-block;
+  direction: rtl;
+  position: relative;
+  font-size: 24px;
+  color: #ccc;
+  line-height: 1;
+}
+
+.star-rating::before {
+  content: '★★★★★';
+}
+
+.star-rating::after {
+  content: '★★★★★';
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+
+  width: var(--star-rating);
+
+  color: #000;
+
+  direction: ltr;
+}
+.feedback-controls {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  fill: #000;
+  width: 16px;
+  height: 16px;
+}
+.swiper-button-prev:disabled,
+.swiper-button-next:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover,
+.swiper-pagination-bullet:hover {
+  cursor: pointer;
+}

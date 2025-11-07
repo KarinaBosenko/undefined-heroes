@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
 .header-container {
   display: flex;
   flex-direction: row;
@@ -146,16 +154,16 @@
     z-index: 1;
   }
 }
+
 @media only screen and (min-width: 1440px) {
   .burger-menu {
     display: none;
   }
-  .header-container {
-    max-width: 1312px;
-  }
+
   .navigation-desktop {
     display: flex;
   }
+
   .go-shopping-button {
     display: flex;
   }

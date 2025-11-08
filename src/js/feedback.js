@@ -6,12 +6,6 @@ import { fetchFeedbacks } from './furniture-api';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
-// ---  Swiper ---
-const swiperContainer = document.querySelector('.swiper');
-const prevBtn = document.querySelector('.swiper-button-prev');
-const nextBtn = document.querySelector('.swiper-button-next');
-
-// Глобальна змінна для Swiper
 let feedbackSwiper;
 
 function roundRating(rating) {
@@ -49,16 +43,12 @@ function renderFeedbacks(feedbacks) {
   });
 }
 
-/**
- * Ініціалізація Swiper.js (ОНОВЛЕНО: додано modules)
- */
 function initSwiper() {
   const swiperContainer = document.querySelector('.swiper');
   const prevBtn = document.querySelector('.swiper-button-prev');
   const nextBtn = document.querySelector('.swiper-button-next');
 
   feedbackSwiper = new Swiper(swiperContainer, {
-    // Обов'язково додаємо імпортовані модулі
     modules: [Navigation, Pagination],
     loop: false,
     spaceBetween: 20,
@@ -90,11 +80,7 @@ function initSwiper() {
   });
 }
 
-/**
- * Функція для оновлення стану кнопок
- */
 function updateNavigationState(swiperInstance, prevBtn, nextBtn) {
-  // Встановлюємо disabled для стилів
   prevBtn.disabled = swiperInstance.isBeginning;
   nextBtn.disabled = swiperInstance.isEnd;
 }
@@ -105,26 +91,18 @@ async function initFeedbackBlock() {
 
     let feedbacksArray;
 
-    // 2. Витягуємо масив з об'єкта.
-    // !! УВАГА: Замініть 'feedbacks' на реальний ключ (наприклад, 'data' або 'items'),
-    // !! якщо 'feedbacks' не спрацює.
     if (result && Array.isArray(result.feedbacks)) {
       feedbacksArray = result.feedbacks;
     } else if (Array.isArray(result)) {
-      // На випадок, якщо API все ж повертає чистий масив
       feedbacksArray = result;
     } else {
-      // Обробка неочікуваного формату
       console.error('API повернуло дані в неочікуваному форматі:', result);
       return;
     }
 
-    // 3. Передаємо саме масив для ітерації
     renderFeedbacks(feedbacksArray);
     initSwiper();
-  } catch (error) {
-    // ...
-  }
+  } catch (error) {}
 }
-// Запускаємо логіку (Vite дозволяє просто викликати функцію)
+
 initFeedbackBlock();

@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import 'css-star-rating/css/star-rating.css';
-
+import { openModal } from './modal-order.js';
 
 export function openProductModal(product) {
   const backdrop = document.querySelector('.js-modal-product');
@@ -68,4 +68,11 @@ document.addEventListener('click', e => {
 
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
+});
+
+document.addEventListener('click', e => {
+  if (e.target.closest('.js-to-order')) {
+    closeModal();
+    setTimeout(() => openModal(), 300); 
+  }
 });

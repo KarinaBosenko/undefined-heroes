@@ -13,6 +13,13 @@ body.menu-open {
   justify-content: space-between;
   height: 72px;
 }
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
 
 .logo-svg {
   fill: #000000;
@@ -112,46 +119,47 @@ body.menu-open {
   .header-menu-bg {
     background-color: #fff;
   }
+  .header-menu {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
 
-  .header-container {
-    max-width: 704px;
+  .close-burger-menu {
+    position: relative;
+  }
+
+  .nav-menu-bg {
+    background-color: #fff;
+    width: 249px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    position: absolute;
+    right: 0;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: right;
+    justify-content: right;
   }
   .navigation-menu {
     align-items: flex-end;
-
-    justify-content: right;
-    margin-top: 0px;
-    padding: 24px 0px;
-    padding-left: 32px;
-    background-color: #fff;
-  }
-  .nav-menu.container {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    max-width: 704px;
+    text-align: right;
+    width: 185px;
+    padding: 24px 0px 24px 32px;
+    margin-top: 0px;
   }
   .go-shopping-button-menu {
     width: 185px;
-  }
-  .nav-menu-bg {
-    position: relative;
-  }
-
-  .nav-menu-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(100% - 704px);
-    height: 100%;
-    background-color: #fff;
-    z-index: 0;
-  }
-
-  .nav-menu.container {
-    position: relative;
-    z-index: 1;
   }
 }
 

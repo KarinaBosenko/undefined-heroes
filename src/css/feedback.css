@@ -1,7 +1,7 @@
 /*  Mobile: 375px+ */
 .feedbacks {
   position: relative;
-  padding: 64px 20px;
+  padding: 64px 0;
 }
 .feedbacks-title {
   font-size: 36px;
@@ -68,7 +68,7 @@
 
 .feedback-controls {
   display: flex;
-  justify-content: r;
+  justify-content: center;
   align-items: center;
   width: 100%;
   position: relative;
@@ -95,14 +95,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0 !important;
   cursor: pointer;
-  color: #080c09;
+
   background-color: #f2f2f2;
 }
 
-.swiper-button-prev svg path,
-.swiper-button-next svg path {
-  fill: #080c09;
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  color: #080c09;
 }
 
 .swiper-button-prev:hover,
@@ -112,11 +113,11 @@
   background-color: #975052;
 }
 
-.swiper-button-prev:hover svg path,
-.swiper-button-next:hover svg path,
-.swiper-button-prev:focus svg path,
-.swiper-button-next:focus svg path {
-  fill: #ffffff;
+.swiper-button-prev:hover svg,
+.swiper-button-next:hover svg,
+.swiper-button-prev:focus svg,
+.swiper-button-next:focus svg {
+  color: #ffffff;
 }
 .swiper-button-next:active,
 .swiper-button-prev:active {
@@ -130,8 +131,8 @@
   pointer-events: auto;
 }
 
-.swiper-button-prev:disabled svg path,
-.swiper-button-next:disabled svg path {
+.swiper-button-prev:disabled svg,
+.swiper-button-next:disabled svg {
   fill: #080c09;
 }
 

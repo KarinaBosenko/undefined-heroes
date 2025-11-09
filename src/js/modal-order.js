@@ -1,6 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { submitOrder } from './furniture-api';
+import { getSelectedColor, getSelectedFurniture } from './data-store';
 
 const modalOverlay = document.querySelector('.modal-overlay');
 const closeButton = document.querySelector('.close-button');
@@ -60,8 +61,8 @@ async function handlerSubmit(event) {
   const data = {
     name,
     phone,
-    modelId: '682f9bbf8acbdf505592ac36',
-    color: '#1212ca',
+    modelId: getSelectedFurniture(),
+    color: getSelectedColor(),
     comment,
   };
 

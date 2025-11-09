@@ -1,4 +1,4 @@
-.furniture-section{
+.furniture-list{
     padding: 48px 0;
 }
 .furniture-title{
@@ -11,7 +11,7 @@
 .furniture-dscr{
     margin-bottom: 40px;
 }
-.furniture-section button{
+.furniture-list button{
     box-sizing: border-box;
     height: 46px;
 }

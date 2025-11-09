@@ -20,9 +20,6 @@
     display: block;
     margin: 0 auto;
 }
-.furniture-load-more-btn:disabled{
-    cursor: not-allowed;
-}
 .furniture .loader{
     display: block;
     margin: 0 auto;
@@ -85,6 +82,10 @@
 .furniture-img{
     border-radius: 8px;
     height: 277px;
+    object-fit: cover;
+}
+.gallery-item{
+    width: calc(100% / 1);
 }
 .gallery-item-dscr{
     display: flex;
@@ -93,7 +94,7 @@
     padding: 16px 0;
 }
 .gallery-item-info-btn{
-    width: 335px;
+    width: calc(100% / 1);
     border-radius: 100px;
     font-weight: 500;
     line-height: 1.6;

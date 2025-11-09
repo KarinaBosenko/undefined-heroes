@@ -6,6 +6,7 @@ import {
 import {
     openDetailsModal,
 } from "./modal-details.js";
+import { setSelectedFurniture } from './data-store.js';
 
 const furnitureCategories = document.querySelector("ul.furniture-categories");
 const furnitureGallery = document.querySelector("ul.furniture-gallery");
@@ -15,92 +16,98 @@ const loader = document.querySelector("span.loader");
 //saving order from design
 const categories = [
     {
-        _id: "all",
+        id: "all",
         name: "Всі товари",
         image: "./img/furniture_list_section/all1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7b8",
+        id: "66504a50a1b2c3d4e5f6a7b8",
         name: "М'які меблі",
         image: "./img/furniture_list_section/sofa1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7b9",
+        id: "66504a50a1b2c3d4e5f6a7b9",
         name: "Шафи та системи зберігання",
         image: "./img/furniture_list_section/wardrobe1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7ba",
+        id: "66504a50a1b2c3d4e5f6a7ba",
         name: "Ліжка та матраци",
         image: "./img/furniture_list_section/bed1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7bb",
+        id: "66504a50a1b2c3d4e5f6a7bb",
         name: "Столи",
         image: "./img/furniture_list_section/table1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7bc",
+        id: "66504a50a1b2c3d4e5f6a7bc",
         name: "Стільці та табурети",
         image: "./img/furniture_list_section/chairs1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7bd",
+        id: "66504a50a1b2c3d4e5f6a7bd",
         name: "Кухні",
         image: "./img/furniture_list_section/kitchen1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7be",
+        id: "66504a50a1b2c3d4e5f6a7be",
         name: "Меблі для дитячої",
         image: "./img/furniture_list_section/kid1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7bf",
+        id: "66504a50a1b2c3d4e5f6a7bf",
         name: "Меблі для офісу",
         image: "./img/furniture_list_section/office1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7c0",
+        id: "66504a50a1b2c3d4e5f6a7c0",
         name: "Меблі для передпокою",
         image: "./img/furniture_list_section/entryway1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7c1",
+        id: "66504a50a1b2c3d4e5f6a7c1",
         name: "Меблі для ванної кімнати",
         image: "./img/furniture_list_section/bathroom1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7c2",
+        id: "66504a50a1b2c3d4e5f6a7c2",
         name: "Садові та вуличні меблі",
         image: "./img/furniture_list_section/garden1x-min.jpg",
     },
     {
-        _id: "66504a50a1b2c3d4e5f6a7c3",
+        id: "66504a50a1b2c3d4e5f6a7c3",
         name: "Декор та аксесуари",
         image: "./img/furniture_list_section/decor1x-min.jpg",
     },
 ];
 
 //adding a list of categories
-export const categoriesList = categories => {
-    furnitureCategories.insertAdjacentHTML("beforeend", categories
-        .map(({
-            _id,
-            name,
-            image,
-        }) =>
-            `
-            <li class="category-item">
-                <a class="category-link" data-category="${_id}">
-                    <div class="category-img-wrapper">
-                        <img class="category-img" src="${image}" srcset="${image} 1x, ${image.replace('1x', '2x')} 2x" alt="${name}"/>
-                        <div class="category-overlay">${name}</div> 
-                    </div>
-                </a>
-            </li>
-            `
-        ).join("")
-    )
+export const categoriesList = async () => {
+    try {
+        let data = await fetchCategories();
+        furnitureCategories.insertAdjacentHTML("beforeend", categories
+                .filter(category => category.id === "all" || data.find(d => d._id === category.id))
+                .map(({
+                    id,
+                    name,
+                    image,
+                }) =>
+                    `
+                    <li class="category-item">
+                        <a class="category-link" data-category="${id}">
+                            <div class="category-img-wrapper">
+                                <img class="category-img" src="${image}" srcset="${image} 1x, ${image.replace('1x', '2x')} 2x" alt="${name}"/>
+                                <div class="category-overlay">${name}</div> 
+                            </div>
+                        </a>
+                    </li>                
+                    `
+                ).join("")
+        )
+    } catch (error) {
+        console.error("Помилка при заватаженні категорій: ", error);
+    }
 };
 
 //creating gallery
@@ -244,6 +251,7 @@ loadMoreBtn.addEventListener("click", async () => {
 furnitureGallery.addEventListener("click", event => {
     if (event.target.classList.contains("gallery-item-info-btn")) {
         const itemId = event.target.closest(".gallery-item").dataset.id;
-        openDetailsModal(itemId);
+        setSelectedFurniture(itemId);
+        openDetailsModal();
     }
 });

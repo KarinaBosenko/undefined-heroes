@@ -5,6 +5,16 @@ import { Pagination } from 'swiper/modules';
 import 'css-star-rating/css/star-rating.css';
 import { openModal } from './modal-order.js';
 
+export function openDetailsModal() {
+  const backdrop = document.querySelector('.js-modal-product');
+  const modal = backdrop.querySelector('.product-modal');
+
+  backdrop.classList.add('active');
+  setTimeout(() => modal.classList.add('animate-in'), 10);
+
+  document.body.style.overflow = "hidden";
+};
+
 export function openProductModal(product) {
   const backdrop = document.querySelector('.js-modal-product');
   const modal = backdrop.querySelector('.product-modal');

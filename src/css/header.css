@@ -78,7 +78,7 @@ body.menu-open {
   align-items: center;
   justify-content: center;
   gap: 32px;
-  margin-top: 32px;
+  padding-top: 32px;
   font-size: 18px;
   font-weight: 600;
 }
@@ -109,7 +109,8 @@ body.menu-open {
   background-color: #6b0609;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.navigation-menu:hover {
+
+.navigation-desktop:hover {
   color: #6b0609;
 }
 @media only screen and (min-width: 768px) {
@@ -131,16 +132,6 @@ body.menu-open {
   .close-burger-menu {
     position: relative;
   }
-
-  .nav-menu-bg {
-    background-color: #fff;
-    width: 249px;
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    position: absolute;
-    right: 0;
-  }
   .menu {
     display: flex;
     flex-direction: column;
@@ -157,6 +148,19 @@ body.menu-open {
     width: 185px;
     padding: 24px 0px 24px 32px;
     margin-top: 0px;
+    width: 217px;
+    background-color: #fff;
+    position: relative;
+  }
+  .navigation-menu::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: calc(-1 * (100vw - 100%));
+    width: calc(100vw - 100%);
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
   }
   .go-shopping-button-menu {
     width: 185px;

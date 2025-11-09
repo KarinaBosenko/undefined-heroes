@@ -17,7 +17,10 @@ function onBackdropClick(event) {
   const clickedElement = event.target;
   const isInsideHeader = clickedElement.closest('.header-menu-bg');
   const isInsideNavContent = clickedElement.closest('.navigation-menu');
-  if (isInsideHeader || isInsideNavContent) {
+  const isInsideNavAfterContent = clickedElement.closest(
+    '.navigation-menu::after'
+  );
+  if (isInsideHeader || isInsideNavContent || isInsideNavAfterContent) {
     return;
   }
   closeMenu();

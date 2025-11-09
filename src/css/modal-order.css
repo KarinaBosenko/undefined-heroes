@@ -56,6 +56,24 @@
   width: 100%;
 }
 
+/***************** Error class ***************************/
+.user-input.error-message,
+.user-text.error-message,
+.user-input.error-message:focus,
+.user-text.error-message:focus,
+.user-input.error-message:hover,
+.user-text.error-message:hover {
+  border: 1px solid #6b0609;
+  color: #6b0609;
+  transition: border 0.3s ease, color 0.3s ease;
+}
+
+.user-input.error-message::placeholder,
+.user-text.error-message::placeholder {
+  color: #6b0609;
+  transition: color 0.3s ease;
+}
+
 .user-input,
 .user-text {
   padding: 12px 8px;
@@ -70,6 +88,7 @@
 .user-text:focus {
   border: 1px solid rgba(8, 12, 9, 0.4);
   outline: none;
+  transition: border 0.3s ease;
 }
 
 .user-input::placeholder,
@@ -81,19 +100,12 @@
 .user-input:hover::placeholder,
 .user-text:hover::placeholder {
   color: #080c09;
+  transition: color 0.3s ease;
 }
 
 .user-input:focus::placeholder,
 .user-text:focus::placeholder {
   color: transparent;
-}
-/***************** Error class ***************************/
-.user-input.error-message,
-.user.text.error-message,
-.user-input.error-message::placeholder,
-.user.text.error-message::placeholder {
-  border: 1px solid #6b0609;
-  color: #6b0609;
 }
 
 .order-form {
@@ -154,4 +166,9 @@
   .order-form {
     width: 738px;
   }
+}
+/* **********loader ******************/
+
+.modal-loader {
+  align-self: center;
 }

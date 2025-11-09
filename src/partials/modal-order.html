@@ -1,4 +1,4 @@
-<div class="modal-overlay">
+<div class="modal-overlay is-open">
   <div class="modal container">
     <button
       type="button"
@@ -44,9 +44,11 @@
             id="form-comments"
             placeholder="Введіть Ваш коментар"
             rows="10"
-            maxlength="300"
+            minlength="5"
+            maxlength="256"
           ></textarea>
         </div>
+        <span class="loader modal-loader hidden"></span>
         <button class="primary-btn order-button" type="submit">
           Надіслати заявку
         </button>

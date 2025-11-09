@@ -13,7 +13,7 @@ const furnitureGallery = document.querySelector("ul.furniture-gallery");
 const loadMoreBtn = document.querySelector("button.furniture-load-more-btn");
 const loader = document.querySelector("span.loader");
 
-//saving order from design
+// saving order from design
 const categories = [
     {
         id: "all",

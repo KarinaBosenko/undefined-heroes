@@ -138,7 +138,7 @@ export const categoriesList = async () => {
                     <li class="category-item">
                         <a class="category-link" data-category="${id}">
                             <div class="category-img-wrapper">
-                                <img class="category-img" src="${image}" srcset="${image.x1} 1x, ${image.x2} 2x" alt="${name}"/>
+                                <img class="category-img" src="${image.x1}" srcset="${image.x1} 1x, ${image.x2} 2x" alt="${name}"/>
                                 <div class="category-overlay">${name}</div> 
                             </div>
                         </a>

@@ -12,9 +12,6 @@
 .feedback-card {
   padding-bottom: 48px;
 }
-.feedback-card {
-  margin-bottom: 16px;
-}
 
 .rating {
   justify-content: start !important;
@@ -58,7 +55,11 @@
     padding: 64px 0;
   }
 }
-
+.feedbacks .loader {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
 .feedback-controls {
   display: flex;
   justify-content: center;

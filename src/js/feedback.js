@@ -7,8 +7,15 @@ import { fetchFeedbacks } from './furniture-api';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
-let feedbackSwiper;
+const loader = document.getElementById('loader');
 
+function showLoader() {
+  loader.classList.remove('hidden');
+}
+
+function hideLoader() {
+  loader.classList.add('hidden');
+}
 function roundRating(rating) {
   if (rating >= 3.3 && rating <= 3.7) {
     return 3.5;
@@ -115,6 +122,7 @@ function updateNavigationState(swiperInstance, prevBtn, nextBtn) {
 }
 
 async function initFeedbackBlock() {
+  showLoader();
   try {
     const result = await fetchFeedbacks();
 
@@ -133,6 +141,8 @@ async function initFeedbackBlock() {
     initSwiper();
   } catch (error) {
     console.error('Помилка завантаження відгуків:', error);
+  } finally {
+    hideLoader();
   }
 }
 

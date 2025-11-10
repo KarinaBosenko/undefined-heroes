@@ -2,7 +2,7 @@ import{a as m,A as P,i as j}from"./assets/vendor-CeEp1xzB.js";(function(){const 
                     <li class="category-item">
                         <a class="category-link" data-category="${t}">
                             <div class="category-img-wrapper">
-                                <img class="category-img" src="${i}" srcset="${i.x1} 1x, ${i.x2} 2x" alt="${r}"/>
+                                <img class="category-img" src="${i.x1}" srcset="${i.x1} 1x, ${i.x2} 2x" alt="${r}"/>
                                 <div class="category-overlay">${r}</div> 
                             </div>
                         </a>

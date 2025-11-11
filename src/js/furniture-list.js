@@ -7,6 +7,44 @@ import {
 } from './furniture-api.js';
 import { openDetailsModal } from './modal-details.js';
 import { setSelectedFurniture } from './data-store.js';
+import all1x from '../img/furniture_list/all1x.jpg';
+import all2x from '../img/furniture_list/all2x.jpg';
+
+import sofa1x from '../img/furniture_list/sofa1x.jpg';
+import sofa2x from '../img/furniture_list/sofa2x.jpg';
+
+import wardrobe1x from '../img/furniture_list/wardrobe1x.jpg';
+import wardrobe2x from '../img/furniture_list/wardrobe2x.jpg';
+
+import bed1x from '../img/furniture_list/bed1x.jpg';
+import bed2x from '../img/furniture_list/bed2x.jpg';
+
+import table1x from '../img/furniture_list/table1x.jpg';
+import table2x from '../img/furniture_list/table2x.jpg';
+
+import chairs1x from '../img/furniture_list/chairs1x.jpg';
+import chairs2x from '../img/furniture_list/chairs2x.jpg';
+
+import kitchen1x from '../img/furniture_list/kitchen1x.jpg';
+import kitchen2x from '../img/furniture_list/kitchen2x.jpg';
+
+import kid1x from '../img/furniture_list/kid1x.jpg';
+import kid2x from '../img/furniture_list/kid2x.jpg';
+
+import office1x from '../img/furniture_list/office1x.jpg';
+import office2x from '../img/furniture_list/office2x.jpg';
+
+import entryway1x from '../img/furniture_list/entryway1x.jpg';
+import entryway2x from '../img/furniture_list/entryway2x.jpg';
+
+import bathroom1x from '../img/furniture_list/bathroom1x.jpg';
+import bathroom2x from '../img/furniture_list/bathroom2x.jpg';
+
+import garden1x from '../img/furniture_list/garden1x.jpg';
+import garden2x from '../img/furniture_list/garden2x.jpg';
+
+import decor1x from '../img/furniture_list/decor1x.jpg';
+import decor2x from '../img/furniture_list/decor2x.jpg';
 
 const furnitureCategories = document.querySelector('ul.furniture-categories');
 const furnitureGallery = document.querySelector('ul.furniture-gallery');
@@ -18,106 +56,67 @@ const categories = [
   {
     id: 'all',
     name: 'Всі товари',
-    image: {
-      x1: './img/furniture_list/all1x.jpg',
-      x2: '/img/furniture_list/all2x-min.jpg',
-    },
+    image: { x1: all1x, x2: all2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7b8',
     name: "М'які меблі",
-    image: {
-      x1: './img/furniture_list/sofa1x.jpg',
-      x2: '/img/furniture_list/sofa2x-min.jpg',
-    },
+    image: { x1: sofa1x, x2: sofa2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7b9',
     name: 'Шафи та системи зберігання',
-    image: {
-      x1: './img/furniture_list/wardrobe1x.jpg',
-      x2: '/img/furniture_list/wardrobe2x-min.jpg',
-    },
+    image: { x1: wardrobe1x, x2: wardrobe2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7ba',
     name: 'Ліжка та матраци',
-    image: {
-      x1: './img/furniture_list/bed1x.jpg',
-      x2: '/img/furniture_list/bed2x-min.jpg',
-    },
+    image: { x1: bed1x, x2: bed2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7bb',
     name: 'Столи',
-    image: {
-      x1: './img/furniture_list/table1x.jpg',
-      x2: '/img/furniture_list/table2x-min.jpg',
-    },
+    image: { x1: table1x, x2: table2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7bc',
     name: 'Стільці та табурети',
-    image: {
-      x1: './img/furniture_list/chairs1x.jpg',
-      x2: '/img/furniture_list/chairs2x-min.jpg',
-    },
+    image: { x1: chairs1x, x2: chairs2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7bd',
     name: 'Кухні',
-    image: {
-      x1: './img/furniture_list/kitchen1x.jpg',
-      x2: '/img/furniture_list/kitchen2x-min.jpg',
-    },
+    image: { x1: kitchen1x, x2: kitchen2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7be',
     name: 'Меблі для дитячої',
-    image: {
-      x1: './img/furniture_list/kid1x.jpg',
-      x2: '/img/furniture_list/kid2x-min.jpg',
-    },
+    image: { x1: kid1x, x2: kid2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7bf',
     name: 'Меблі для офісу',
-    image: {
-      x1: './img/furniture_list/office1x.jpg',
-      x2: '/img/furniture_list/office2x-min.jpg',
-    },
+    image: { x1: office1x, x2: office2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7c0',
     name: 'Меблі для передпокою',
-    image: {
-      x1: './img/furniture_list/entryway1x.jpg',
-      x2: '/img/furniture_list/entryway2x-min.jpg',
-    },
+    image: { x1: entryway1x, x2: entryway2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7c1',
     name: 'Меблі для ванної кімнати',
-    image: {
-      x1: './img/furniture_list/bathroom1x.jpg',
-      x2: '/img/furniture_list/bathroom2x-min.jpg',
-    },
+    image: { x1: bathroom1x, x2: bathroom2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7c2',
     name: 'Садові та вуличні меблі',
-    image: {
-      x1: './img/furniture_list/garden1x.jpg',
-      x2: '/img/furniture_list/garden2x-min.jpg',
-    },
+    image: { x1: garden1x, x2: garden2x },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7c3',
     name: 'Декор та аксесуари',
-    image: {
-      x1: './img/furniture_list/decor1x.jpg',
-      x2: '/img/furniture_list/decor2x-min.jpg',
-    },
+    image: { x1: decor1x, x2: decor2x },
   },
 ];
 

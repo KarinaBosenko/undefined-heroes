@@ -140,6 +140,7 @@
   }
 
   .furniture-gallery {
+    justify-content: start;
     flex-direction: row;
     flex-wrap: wrap;
   }

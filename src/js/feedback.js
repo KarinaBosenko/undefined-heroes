@@ -9,6 +9,8 @@ import { fetchFeedbacks } from './furniture-api';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
+import iconsSpriteUrl from '../img/icons-sprite.svg';
+
 const loader = document.getElementById('loader');
 let feedbackSwiper = null;
 
@@ -48,7 +50,7 @@ function generateStars(rating) {
     starsHtml += `
       <div class="star">
         <svg width="24" height="24" viewBox="0 0 34 32">
-          <use href="./img/icons-sprite.svg#${iconId}"></use>
+          <use href="${iconsSpriteUrl}#${iconId}"></use>
         </svg>
       </div>
     `;

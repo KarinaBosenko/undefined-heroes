@@ -9,6 +9,7 @@ const orderForm = document.querySelector('.order-form');
 const loader = document.querySelector('.loader');
 const errorFields = document.querySelectorAll('.user-input, .user-text');
 const orderButton = document.querySelector('.order-button');
+const usernameInput = document.querySelector('#username');
 
 // Opening and closind action
 
@@ -19,6 +20,7 @@ function closeModal() {
 
 export function openModal() {
   modalOverlay.classList.add('is-open');
+  usernameInput.focus();
   document.body.style.overflow = 'hidden';
 }
 // Appiarence actions

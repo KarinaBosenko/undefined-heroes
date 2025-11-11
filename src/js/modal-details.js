@@ -4,6 +4,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import { getSelectedFurniture, setSelectedColor } from './data-store.js';
 import { fetchFurnitureById } from './furniture-api.js';
 import { openModal } from './modal-order.js';
+import iconsSpriteUrl from '../img/icons-sprite.svg';
 
 const modal = document.querySelector('.js-modal-product');
 const loader = modal.querySelector('.loader');
@@ -102,7 +103,7 @@ function renderStars(rating) {
     starsHtml += `
       <div class="star">
         <svg width="24" height="24" viewBox="0 0 34 32">
-          <use href="./img/icons-sprite.svg#${iconId}"></use>
+          <use href="${iconsSpriteUrl}#${iconId}"></use>
         </svg>
       </div>
     `;

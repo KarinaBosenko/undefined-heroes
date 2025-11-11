@@ -32,7 +32,7 @@ import{a as d,i as c,S as A,N as P,P as O,A as J}from"./assets/vendor-DaBFZYBc.j
                 <li class="gallery-item" data-id="${t}">
                     <img src="${o[0]}" alt="${r}" class="furniture-img"/>
                     <div class="gallery-item-dscr">
-                        <p class="furniture-subtitle">${r}</p>
+                        <p class="gallery-item-title">${r}</p>
                         <div class="color" data-id="${s}">${a}</div>
                         <p class="price">${n} грн</p>                    
                     </div>

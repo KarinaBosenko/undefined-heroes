@@ -79,8 +79,36 @@ export function openProductModal(product) {
 
 function renderStars(rating) {
   const full = Math.floor(rating);
-  const empty = 5 - full;
-  return '★'.repeat(full) + '☆'.repeat(empty);
+  const hasHalf = rating % 1 !== 0;
+  const total = 5;
+
+  let starsHtml = '';
+
+  for (let i = 0; i < total; i++) {
+    let iconId = 'star-empty';
+
+    if (i < full) {
+      iconId = 'star-filled';
+    } else if (i === full && hasHalf) {
+      iconId = 'star-half';
+    }
+
+    starsHtml += `
+      <div class="star">
+        <svg width="24" height="24" viewBox="0 0 34 32">
+          <use href="./img/icons.svg#${iconId}"></use>
+        </svg>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="rating star-svg medium color-default">
+      <div class="star-container">
+        ${starsHtml}
+      </div>
+    </div>
+  `;
 }
 
 function closeModal() {

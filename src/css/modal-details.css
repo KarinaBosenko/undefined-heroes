@@ -93,11 +93,34 @@
 }
 
 .product-modal__rating {
-  font-size: 18px;
-  color: #ffb400;
   margin-bottom: 24px;
 }
 
+.product-modal__rating .rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.product-modal__rating .star-container {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.product-modal__rating .star {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.product-modal__rating .star svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
 .product-modal__colors {
   margin-bottom: 24px;
 }

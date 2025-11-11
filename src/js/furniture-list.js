@@ -17,104 +17,104 @@ const categories = [
     id: 'all',
     name: 'Всі товари',
     image: {
-      x1: './img/furniture_list_section/all1x-min.jpg',
-      x2: './img/furniture_list_section/all2x-min.jpg',
+      x1: '/img/furniture_list_section/all1x-min.jpg',
+      x2: '/img/furniture_list_section/all2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7b8',
     name: "М'які меблі",
     image: {
-      x1: './img/furniture_list_section/sofa1x-min.jpg',
-      x2: './img/furniture_list_section/sofa2x-min.jpg',
+      x1: '/img/furniture_list_section/sofa1x-min.jpg',
+      x2: '/img/furniture_list_section/sofa2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7b9',
     name: 'Шафи та системи зберігання',
     image: {
-      x1: './img/furniture_list_section/wardrobe1x-min.jpg',
-      x2: './img/furniture_list_section/wardrobe2x-min.jpg',
+      x1: '/img/furniture_list_section/wardrobe1x-min.jpg',
+      x2: '/img/furniture_list_section/wardrobe2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7ba',
     name: 'Ліжка та матраци',
     image: {
-      x1: './img/furniture_list_section/bed1x-min.jpg',
-      x2: './img/furniture_list_section/bed2x-min.jpg',
+      x1: '/img/furniture_list_section/bed1x-min.jpg',
+      x2: '/img/furniture_list_section/bed2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7bb',
     name: 'Столи',
     image: {
-      x1: './img/furniture_list_section/table1x-min.jpg',
-      x2: './img/furniture_list_section/table2x-min.jpg',
+      x1: '/img/furniture_list_section/table1x-min.jpg',
+      x2: '/img/furniture_list_section/table2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7bc',
     name: 'Стільці та табурети',
     image: {
-      x1: './img/furniture_list_section/chairs1x-min.jpg',
-      x2: './img/furniture_list_section/chairs2x-min.jpg',
+      x1: '/img/furniture_list_section/chairs1x-min.jpg',
+      x2: '/img/furniture_list_section/chairs2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7bd',
     name: 'Кухні',
     image: {
-      x1: './img/furniture_list_section/kitchen1x-min.jpg',
-      x2: './img/furniture_list_section/kitchen2x-min.jpg',
+      x1: '/img/furniture_list_section/kitchen1x-min.jpg',
+      x2: '/img/furniture_list_section/kitchen2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7be',
     name: 'Меблі для дитячої',
     image: {
-      x1: './img/furniture_list_section/kid1x-min.jpg',
-      x2: './img/furniture_list_section/kid2x-min.jpg',
+      x1: '/img/furniture_list_section/kid1x-min.jpg',
+      x2: '/img/furniture_list_section/kid2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7bf',
     name: 'Меблі для офісу',
     image: {
-      x1: './img/furniture_list_section/office1x-min.jpg',
-      x2: './img/furniture_list_section/office2x-min.jpg',
+      x1: '/img/furniture_list_section/office1x-min.jpg',
+      x2: '/img/furniture_list_section/office2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7c0',
     name: 'Меблі для передпокою',
     image: {
-      x1: './img/furniture_list_section/entryway1x-min.jpg',
-      x2: './img/furniture_list_section/entryway2x-min.jpg',
+      x1: '/img/furniture_list_section/entryway1x-min.jpg',
+      x2: '/img/furniture_list_section/entryway2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7c1',
     name: 'Меблі для ванної кімнати',
     image: {
-      x1: './img/furniture_list_section/bathroom1x-min.jpg',
-      x2: './img/furniture_list_section/bathroom2x-min.jpg',
+      x1: '/img/furniture_list_section/bathroom1x-min.jpg',
+      x2: '/img/furniture_list_section/bathroom2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7c2',
     name: 'Садові та вуличні меблі',
     image: {
-      x1: './img/furniture_list_section/garden1x-min.jpg',
-      x2: './img/furniture_list_section/garden2x-min.jpg',
+      x1: '/img/furniture_list_section/garden1x-min.jpg',
+      x2: '/img/furniture_list_section/garden2x-min.jpg',
     },
   },
   {
     id: '66504a50a1b2c3d4e5f6a7c3',
     name: 'Декор та аксесуари',
     image: {
-      x1: './img/furniture_list_section/decor1x-min.jpg',
-      x2: './img/furniture_list_section/decor2x-min.jpg',
+      x1: '/img/furniture_list_section/decor1x-min.jpg',
+      x2: '/img/furniture_list_section/decor2x-min.jpg',
     },
   },
 ];

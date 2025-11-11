@@ -45,18 +45,18 @@ function createPopularProducts(products) {
       const colorPick = color
         .map(
           c =>
-            `<span class="gallery-item-color-pick" style="background-color:${c};"></span>`
+            `<span class="popular-gallery-item-color-pick" style="background-color:${c};"></span>`
         )
         .join('');
       return `
-    <li class="gallery-item swiper-slide" data-id="${_id}">
-        <img src="${images[0]}" alt="${name}" class="gallery-item-img"/>
-        <div class="gallery-item-dscr">
-            <p class="gallery-item-title">${name}</p>
-            <div class="gallery-item-color" data-id="${color}">${colorPick}</div>
-             <p class="gallery-item-price">${price} грн</p>                    
+    <li class="popular-gallery-item swiper-slide" data-id="${_id}">
+        <img src="${images[0]}" alt="${name}" class="popular-allery-item-img"/>
+        <div class="popular-gallery-item-dscr">
+            <p class="popular-gallery-item-title">${name}</p>
+            <div class="popular-gallery-item-color" data-id="${color}">${colorPick}</div>
+             <p class="popular-gallery-item-price">${price} грн</p>                    
         </div>
-        <button type="button" class="gallery-item-info-btn">Детальніше</button>
+        <button type="button" class="popular-gallery-item-info-btn">Детальніше</button>
     </li>`;
     })
     .join('');

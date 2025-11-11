@@ -472,6 +472,7 @@
             name="username"
             id="username"
             placeholder="Дмитро"
+            required
           />
         </div>
         <div class="input-group">
@@ -483,6 +484,7 @@
             id="user-phone"
             placeholder="380991232211"
             required
+            pattern="^[0-9]{12}$"
           />
         </div>
         <div class="input-group">
@@ -493,6 +495,7 @@
             id="form-comments"
             placeholder="Введіть Ваш коментар"
             rows="10"
+            required
             minlength="5"
             maxlength="256"
           ></textarea>

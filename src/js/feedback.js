@@ -2,6 +2,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'css-star-rating/css/star-rating.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 import { fetchFeedbacks } from './furniture-api';
 import Swiper from 'swiper';
@@ -141,7 +143,11 @@ async function initFeedbackBlock() {
     renderFeedbacks(feedbacksArray);
     initSwiper();
   } catch (error) {
-    console.error('Помилка завантаження відгуків:', error);
+    iziToast.error({
+      title: 'Error',
+      position: 'topRight',
+      message: `Помилка завантаження відгуків: ${error}`,
+    });
   } finally {
     hideLoader();
   }

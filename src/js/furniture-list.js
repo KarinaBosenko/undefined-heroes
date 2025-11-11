@@ -1,3 +1,5 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 import {
   fetchCategories,
   fetchDefaultFurniture,
@@ -18,7 +20,7 @@ const categories = [
     name: 'Всі товари',
     image: {
       x1: './img/furniture_list/all1x.jpg',
-      // x2: '/img/furniture_list_section/all2x-min.jpg',
+      x2: '/img/furniture_list/all2x-min.jpg',
     },
   },
   {
@@ -26,7 +28,7 @@ const categories = [
     name: "М'які меблі",
     image: {
       x1: './img/furniture_list/sofa1x.jpg',
-      // x2: '/img/furniture_list_section/sofa2x-min.jpg',
+      x2: '/img/furniture_list/sofa2x-min.jpg',
     },
   },
   {
@@ -34,7 +36,7 @@ const categories = [
     name: 'Шафи та системи зберігання',
     image: {
       x1: './img/furniture_list/wardrobe1x.jpg',
-      // x2: '/img/furniture_list_section/wardrobe2x-min.jpg',
+      x2: '/img/furniture_list/wardrobe2x-min.jpg',
     },
   },
   {
@@ -42,7 +44,7 @@ const categories = [
     name: 'Ліжка та матраци',
     image: {
       x1: './img/furniture_list/bed1x.jpg',
-      // x2: '/img/furniture_list_section/bed2x-min.jpg',
+      x2: '/img/furniture_list/bed2x-min.jpg',
     },
   },
   {
@@ -50,7 +52,7 @@ const categories = [
     name: 'Столи',
     image: {
       x1: './img/furniture_list/table1x.jpg',
-      // x2: '/img/furniture_list_section/table2x-min.jpg',
+      x2: '/img/furniture_list/table2x-min.jpg',
     },
   },
   {
@@ -58,7 +60,7 @@ const categories = [
     name: 'Стільці та табурети',
     image: {
       x1: './img/furniture_list/chairs1x.jpg',
-      // x2: '/img/furniture_list_section/chairs2x-min.jpg',
+      x2: '/img/furniture_list/chairs2x-min.jpg',
     },
   },
   {
@@ -66,7 +68,7 @@ const categories = [
     name: 'Кухні',
     image: {
       x1: './img/furniture_list/kitchen1x.jpg',
-      // x2: '/img/furniture_list_section/kitchen2x-min.jpg',
+      x2: '/img/furniture_list/kitchen2x-min.jpg',
     },
   },
   {
@@ -74,7 +76,7 @@ const categories = [
     name: 'Меблі для дитячої',
     image: {
       x1: './img/furniture_list/kid1x.jpg',
-      // x2: '/img/furniture_list_section/kid2x-min.jpg',
+      x2: '/img/furniture_list/kid2x-min.jpg',
     },
   },
   {
@@ -82,7 +84,7 @@ const categories = [
     name: 'Меблі для офісу',
     image: {
       x1: './img/furniture_list/office1x.jpg',
-      // x2: '/img/furniture_list_section/office2x-min.jpg',
+      x2: '/img/furniture_list/office2x-min.jpg',
     },
   },
   {
@@ -90,7 +92,7 @@ const categories = [
     name: 'Меблі для передпокою',
     image: {
       x1: './img/furniture_list/entryway1x.jpg',
-      // x2: '/img/furniture_list_section/entryway2x-min.jpg',
+      x2: '/img/furniture_list/entryway2x-min.jpg',
     },
   },
   {
@@ -98,7 +100,7 @@ const categories = [
     name: 'Меблі для ванної кімнати',
     image: {
       x1: './img/furniture_list/bathroom1x.jpg',
-      // x2: '/img/furniture_list_section/bathroom2x-min.jpg',
+      x2: '/img/furniture_list/bathroom2x-min.jpg',
     },
   },
   {
@@ -106,7 +108,7 @@ const categories = [
     name: 'Садові та вуличні меблі',
     image: {
       x1: './img/furniture_list/garden1x.jpg',
-      // x2: '/img/furniture_list_section/garden2x-min.jpg',
+      x2: '/img/furniture_list/garden2x-min.jpg',
     },
   },
   {
@@ -114,7 +116,7 @@ const categories = [
     name: 'Декор та аксесуари',
     image: {
       x1: './img/furniture_list/decor1x.jpg',
-      // x2: '/img/furniture_list_section/decor2x-min.jpg',
+      x2: '/img/furniture_list/decor2x-min.jpg',
     },
   },
 ];
@@ -136,7 +138,7 @@ export const categoriesList = async () => {
                     <li class="category-item">
                         <a class="category-link" data-category="${id}">
                             <div class="category-img-wrapper">
-                                <img class="category-img" src="${image.x1}" alt="${name}"/>
+                                <img class="category-img" src="${image.x1}"  srcset="${image.x1} 1x, ${image.x2} 2x" alt="${name}"/>
                                 <div class="category-overlay">${name}</div> 
                             </div>
                         </a>
@@ -146,7 +148,11 @@ export const categoriesList = async () => {
         .join('')
     );
   } catch (error) {
-    console.error('Помилка при заватаженні категорій: ', error);
+    iziToast.error({
+      title: 'Error',
+      message: `Oops! Something went wrong`,
+      position: 'topRight',
+    });
   }
 };
 
@@ -224,7 +230,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     hideLoader();
     setActiveCategory('all');
   } catch (error) {
-    console.error('Помилка при завантаженні меблів:', error);
+    iziToast.error({
+      title: 'Error',
+      message: `Помилка при завантаженні меблів: ${error}`,
+      position: 'topRight',
+    });
     hideLoader();
   }
 });
@@ -257,7 +267,11 @@ furnitureCategories.addEventListener('click', async event => {
 
     createGallery(data.furnitures);
   } catch (error) {
-    console.error('Помилка при завантаженні меблів по категорії:', error);
+    iziToast.error({
+      title: 'Error',
+      message: `Помилка при завантаженні меблів по категорії: ${error}`,
+      position: 'topRight',
+    });
   } finally {
     hideLoader();
   }
@@ -280,7 +294,11 @@ loadMoreBtn.addEventListener('click', async () => {
     }
     createGallery(data.furnitures);
   } catch (error) {
-    console.error('Помилка при завантаженні меблів:', error);
+    iziToast.error({
+      title: 'Error',
+      message: `Помилка при завантаженні меблів: ${error}`,
+      position: 'topRight',
+    });
   } finally {
     hideLoader();
   }

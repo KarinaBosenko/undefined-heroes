@@ -1,4 +1,6 @@
 import 'css-star-rating/css/star-rating.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 import { getSelectedFurniture, setSelectedColor } from './data-store.js';
 import { fetchFurnitureById } from './furniture-api.js';
 import { openModal } from './modal-order.js';
@@ -14,7 +16,11 @@ export async function openDetailsModal() {
     const product = await fetchFurnitureById(id);
     openProductModal(product);
   } catch (e) {
-    console.error('Помилка завантаження товару:', e);
+    iziToast.error({
+      title: 'Error',
+      position: 'topRight',
+      message: `Помилка завантаження товару: ${e}`,
+    });
   } finally {
     hideLoader();
   }

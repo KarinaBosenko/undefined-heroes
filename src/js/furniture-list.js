@@ -18,7 +18,7 @@ const categories = [
     name: 'Всі товари',
     image: {
       x1: '/img/furniture_list_section/all1x-min.jpg',
-      x2: '/img/furniture_list_section/all2x-min.jpg',
+      // x2: '/img/furniture_list_section/all2x-min.jpg',
     },
   },
   {
@@ -26,7 +26,7 @@ const categories = [
     name: "М'які меблі",
     image: {
       x1: '/img/furniture_list_section/sofa1x-min.jpg',
-      x2: '/img/furniture_list_section/sofa2x-min.jpg',
+      // x2: '/img/furniture_list_section/sofa2x-min.jpg',
     },
   },
   {
@@ -34,7 +34,7 @@ const categories = [
     name: 'Шафи та системи зберігання',
     image: {
       x1: '/img/furniture_list_section/wardrobe1x-min.jpg',
-      x2: '/img/furniture_list_section/wardrobe2x-min.jpg',
+      // x2: '/img/furniture_list_section/wardrobe2x-min.jpg',
     },
   },
   {
@@ -42,7 +42,7 @@ const categories = [
     name: 'Ліжка та матраци',
     image: {
       x1: '/img/furniture_list_section/bed1x-min.jpg',
-      x2: '/img/furniture_list_section/bed2x-min.jpg',
+      // x2: '/img/furniture_list_section/bed2x-min.jpg',
     },
   },
   {
@@ -50,7 +50,7 @@ const categories = [
     name: 'Столи',
     image: {
       x1: '/img/furniture_list_section/table1x-min.jpg',
-      x2: '/img/furniture_list_section/table2x-min.jpg',
+      // x2: '/img/furniture_list_section/table2x-min.jpg',
     },
   },
   {
@@ -58,7 +58,7 @@ const categories = [
     name: 'Стільці та табурети',
     image: {
       x1: '/img/furniture_list_section/chairs1x-min.jpg',
-      x2: '/img/furniture_list_section/chairs2x-min.jpg',
+      // x2: '/img/furniture_list_section/chairs2x-min.jpg',
     },
   },
   {
@@ -66,7 +66,7 @@ const categories = [
     name: 'Кухні',
     image: {
       x1: '/img/furniture_list_section/kitchen1x-min.jpg',
-      x2: '/img/furniture_list_section/kitchen2x-min.jpg',
+      // x2: '/img/furniture_list_section/kitchen2x-min.jpg',
     },
   },
   {
@@ -74,7 +74,7 @@ const categories = [
     name: 'Меблі для дитячої',
     image: {
       x1: '/img/furniture_list_section/kid1x-min.jpg',
-      x2: '/img/furniture_list_section/kid2x-min.jpg',
+      // x2: '/img/furniture_list_section/kid2x-min.jpg',
     },
   },
   {
@@ -82,7 +82,7 @@ const categories = [
     name: 'Меблі для офісу',
     image: {
       x1: '/img/furniture_list_section/office1x-min.jpg',
-      x2: '/img/furniture_list_section/office2x-min.jpg',
+      // x2: '/img/furniture_list_section/office2x-min.jpg',
     },
   },
   {
@@ -90,7 +90,7 @@ const categories = [
     name: 'Меблі для передпокою',
     image: {
       x1: '/img/furniture_list_section/entryway1x-min.jpg',
-      x2: '/img/furniture_list_section/entryway2x-min.jpg',
+      // x2: '/img/furniture_list_section/entryway2x-min.jpg',
     },
   },
   {
@@ -98,7 +98,7 @@ const categories = [
     name: 'Меблі для ванної кімнати',
     image: {
       x1: '/img/furniture_list_section/bathroom1x-min.jpg',
-      x2: '/img/furniture_list_section/bathroom2x-min.jpg',
+      // x2: '/img/furniture_list_section/bathroom2x-min.jpg',
     },
   },
   {
@@ -106,7 +106,7 @@ const categories = [
     name: 'Садові та вуличні меблі',
     image: {
       x1: '/img/furniture_list_section/garden1x-min.jpg',
-      x2: '/img/furniture_list_section/garden2x-min.jpg',
+      // x2: '/img/furniture_list_section/garden2x-min.jpg',
     },
   },
   {
@@ -114,7 +114,7 @@ const categories = [
     name: 'Декор та аксесуари',
     image: {
       x1: '/img/furniture_list_section/decor1x-min.jpg',
-      x2: '/img/furniture_list_section/decor2x-min.jpg',
+      // x2: '/img/furniture_list_section/decor2x-min.jpg',
     },
   },
 ];
@@ -136,7 +136,7 @@ export const categoriesList = async () => {
                     <li class="category-item">
                         <a class="category-link" data-category="${id}">
                             <div class="category-img-wrapper">
-                                <img class="category-img" src="${image.x1}" srcset="${image.x1} 1x, ${image.x2} 2x" alt="${name}"/>
+                                <img class="category-img" src="${image.x1}" alt="${name}"/>
                                 <div class="category-overlay">${name}</div> 
                             </div>
                         </a>

@@ -8,6 +8,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
 const loader = document.getElementById('loader');
+let feedbackSwiper = null;
 
 function showLoader() {
   loader.classList.remove('hidden');
@@ -80,9 +81,9 @@ function renderFeedbacks(feedbacks) {
 }
 
 function initSwiper() {
-  const swiperContainer = document.querySelector('.swiper');
-  const prevBtn = document.querySelector('.swiper-button-prev');
-  const nextBtn = document.querySelector('.swiper-button-next');
+  const swiperContainer = document.querySelector('.feedback-slider.swiper');
+  const prevBtn = document.querySelector('.feedback-prev');
+  const nextBtn = document.querySelector('.feedback-next');
 
   feedbackSwiper = new Swiper(swiperContainer, {
     modules: [Navigation, Pagination],
@@ -91,7 +92,7 @@ function initSwiper() {
     slidesPerView: 1,
 
     pagination: {
-      el: '.swiper-pagination',
+      el: '.feedback-pagination',
       clickable: true,
     },
 

@@ -72,8 +72,8 @@ function hideLoader() {
 
 function initSwiper() {
   const swiperContainer = document.querySelector('.popular-products-swiper');
-  const prevBtn = document.querySelector('.swiper-button-prev');
-  const nextBtn = document.querySelector('.swiper-button-next');
+  const prevBtn = document.querySelector('.popular-products-prev');
+  const nextBtn = document.querySelector('.popular-products-next');
 
   swiper = new Swiper(swiperContainer, {
     modules: [Navigation, Pagination],
@@ -86,7 +86,7 @@ function initSwiper() {
       prevEl: prevBtn,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.popular-products-pagination',
       clickable: true,
       dynamicBullets: true,
     },

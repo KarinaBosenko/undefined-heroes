@@ -140,14 +140,14 @@
   gap: 16px;
 }
 
-.swiper-pagination {
+.spopular-products-pagination {
   position: static !important;
   transform: none !important;
   width: 104px !important;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.popular-products-prev,
+.popular-products-next {
   position: static !important;
   transform: none !important;
   margin-top: 0 !important;
@@ -157,38 +157,38 @@
   background-color: #f2f2f2;
 }
 
-.swiper-button-prev svg,
-.swiper-button-next svg {
+.popular-products-prev svg,
+.popular-products-next svg {
   color: #080c09;
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover,
-.swiper-button-prev:focus,
-.swiper-button-next:focus {
+.popular-products-prev:hover,
+.popular-products-next:hover,
+.popular-products-prev:focus,
+.popular-products-next:focus {
   background-color: #975052;
 }
 
-.swiper-button-prev:hover svg,
-.swiper-button-next:hover svg,
-.swiper-button-prev:focus svg,
-.swiper-button-next:focus svg {
+.popular-products-prev:hover svg,
+.popular-products-next:hover svg,
+.popular-products-prev:focus svg,
+.popular-products-next:focus svg {
   color: #ffffff;
 }
-.swiper-button-next:active,
-.swiper-button-prev:active {
+.popular-products-next:active,
+.popular-products-prev:active {
   background-color: #6b0609;
 }
-.swiper-button-prev:disabled,
-.swiper-button-next:disabled {
+.popular-products-prev:disabled,
+.popular-products-next:disabled {
   opacity: 0.3;
   background-color: #f2f2f2;
   cursor: default;
   pointer-events: auto;
 }
 
-.swiper-button-prev:disabled svg,
-.swiper-button-next:disabled svg {
+.popular-products-prev:disabled svg,
+.popular-products-next:disabled svg {
   fill: #080c09;
 }
 

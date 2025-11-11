@@ -1,7 +1,11 @@
 import 'css-star-rating/css/star-rating.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { getSelectedFurniture, setSelectedColor } from './data-store.js';
+import {
+  getSelectedColor,
+  getSelectedFurniture,
+  setSelectedColor,
+} from './data-store.js';
 import { fetchFurnitureById } from './furniture-api.js';
 import { openModal } from './modal-order.js';
 import iconsSpriteUrl from '../img/icons-sprite.svg';
@@ -28,6 +32,7 @@ export async function openDetailsModal() {
 }
 
 export function openProductModal(product) {
+  setSelectedColor(null);
   const backdrop = document.querySelector('.js-modal-product');
   const modal = backdrop.querySelector('.product-modal');
 
@@ -76,6 +81,9 @@ export function openProductModal(product) {
   });
 
   const orderBtn = modal.querySelector('.js-to-order');
+  if (!getSelectedColor()) {
+    setSelectedColor(product.color[0]);
+  }
   orderBtn.addEventListener('click', () => {
     closeModal();
     setTimeout(() => {

@@ -16,8 +16,3 @@ export function setSelectedColor(color) {
 export function getSelectedColor() {
   return selectedColor;
 }
-
-export function resetSelection() {
-  selectedFurniture = null;
-  selectedColor = null;
-}

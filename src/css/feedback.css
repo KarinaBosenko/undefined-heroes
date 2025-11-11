@@ -1,0 +1,136 @@
+.feedbacks {
+  position: relative;
+  padding: 64px 0;
+}
+.feedbacks-title {
+  font-size: 36px;
+  padding-bottom: 24px;
+}
+.feedbacks-subtitle {
+  padding-bottom: 80px;
+}
+.feedback-card {
+  padding-bottom: 48px;
+}
+
+.rating {
+  justify-content: start !important;
+}
+.star-container {
+  margin: 0 !important;
+}
+.rating .star {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  fill: #080c09 !important;
+}
+.rating .star svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.feedback-text {
+  padding: 24px 48px 24px 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+.feedback-author {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Tablet: 768px+ */
+@media (min-width: 768px) {
+  .feedbacks {
+    padding: 32px 0;
+  }
+}
+
+/* Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .feedbacks {
+    padding: 64px 0;
+  }
+}
+.feedbacks .loader {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.feedback-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.navigation-wrapper {
+  display: flex;
+  gap: 12px;
+}
+.swiper-pagination {
+  position: static !important;
+  text-align: left !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  transform: none !important;
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  border-radius: 100px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0 !important;
+  cursor: pointer;
+
+  background-color: #f2f2f2;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  color: #080c09;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  background-color: #975052;
+}
+
+.swiper-button-prev:hover svg,
+.swiper-button-next:hover svg,
+.swiper-button-prev:focus svg,
+.swiper-button-next:focus svg {
+  color: #ffffff;
+}
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background-color: #6b0609;
+}
+.swiper-button-prev:disabled,
+.swiper-button-next:disabled {
+  opacity: 0.3;
+  background-color: #f2f2f2;
+  cursor: default;
+  pointer-events: auto;
+}
+
+.swiper-button-prev:disabled svg,
+.swiper-button-next:disabled svg {
+  fill: #080c09;
+}
+
+.swiper-pagination-bullet {
+  background-color: #080c09 !important;
+  opacity: 1;
+}

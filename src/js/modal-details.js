@@ -96,7 +96,7 @@ function renderStars(rating) {
     starsHtml += `
       <div class="star">
         <svg width="24" height="24" viewBox="0 0 34 32">
-          <use href="./img/icons.svg#${iconId}"></use>
+          <use href="./img/icons-sprite.svg#${iconId}"></use>
         </svg>
       </div>
     `;

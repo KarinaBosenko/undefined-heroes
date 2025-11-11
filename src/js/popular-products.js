@@ -50,7 +50,7 @@ function createPopularProducts(products) {
         .join('');
       return `
     <li class="popular-gallery-item swiper-slide" data-id="${_id}">
-        <img src="${images[0]}" alt="${name}" class="popular-allery-item-img"/>
+        <img src="${images[0]}" alt="${name}" class="popular-gallery-item-img"/>
         <div class="popular-gallery-item-dscr">
             <p class="popular-gallery-item-title">${name}</p>
             <div class="popular-gallery-item-color" data-id="${color}">${colorPick}</div>
@@ -112,10 +112,10 @@ function updateNavigationState(swiperInstance, prevBtn, nextBtn) {
 }
 
 function onDetailsClick(event) {
-  const btn = event.target.closest('.gallery-item-info-btn');
+  const btn = event.target.closest('.popular-gallery-item-info-btn');
   if (!btn) return;
 
-  const card = btn.closest('.gallery-item');
+  const card = btn.closest('.popular-gallery-item');
   const id = card.dataset.id;
 
   setSelectedFurniture(id);

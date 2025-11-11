@@ -1,7 +1,7 @@
 .furniture-list {
   padding: 48px 0;
 }
-.furniture-title {
+.furniture-list-title {
   font-size: 36px;
   margin-bottom: 16px;
 }
@@ -184,7 +184,7 @@
   .furniture-list {
     padding: 80px 0;
   }
-  .furniture-title {
+  .furniture-list-title {
     font-size: 48px;
   }
 

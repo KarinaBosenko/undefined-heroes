@@ -16,20 +16,21 @@
 .hero-title {
   color: #fff;
   font-size: 40px;
-  margin-bottom: 24px;  
+  margin-bottom: 24px;
 }
 
 .hero-text {
   font-size: 18px;
   color: #fff;
-  margin-bottom: 32px;  
+  margin-bottom: 32px;
 }
-.primary-btn, btn {
- border-radius: 100px;
- padding: 10px 24px;
- width: 335px;
- height: 46px;
-} 
+.btn {
+  border-radius: 100px;
+  padding: 10px 24px;
+  width: 100%;
+  max-width: 335px;
+  height: 46px;
+}
 
 @media (min-width: 768px) {
   .hero {
@@ -54,7 +55,7 @@
     max-width: 560px;
   }
 
-  .primary-btn, btn {
+  .btn {
     width: 209px;
     height: 46px;
   }
@@ -73,6 +74,6 @@
     }
   }
   .hero-title {
-      font-size: 56px;
+    font-size: 56px;
   }
 }

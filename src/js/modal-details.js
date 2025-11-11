@@ -85,12 +85,12 @@ function renderStars(rating) {
   let starsHtml = '';
 
   for (let i = 0; i < total; i++) {
-    let iconId = 'star-empty1';
+    let iconId = 'star-empty';
 
     if (i < full) {
-      iconId = 'star-filled1';
+      iconId = 'star-filled';
     } else if (i === full && hasHalf) {
-      iconId = 'star-half1';
+      iconId = 'star-half';
     }
 
     starsHtml += `

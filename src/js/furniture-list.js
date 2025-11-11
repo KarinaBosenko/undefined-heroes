@@ -3,9 +3,7 @@ import {
   fetchDefaultFurniture,
   fetchFurnitureByCategory,
 } from './furniture-api.js';
-// import {
-//     openDetailsModal,
-// } from "./modal-details.js";
+import { openDetailsModal } from './modal-details.js';
 import { setSelectedFurniture } from './data-store.js';
 
 const furnitureCategories = document.querySelector('ul.furniture-categories');

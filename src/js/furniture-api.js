@@ -88,7 +88,7 @@ export async function fetchPopularFurniture() {
     const response = await axios.get(`${BASE_URL}/furnitures`, {
       params: {
         type: 'popular',
-        limit: 3,
+        // limit: 3,
       },
     });
     return response.data;

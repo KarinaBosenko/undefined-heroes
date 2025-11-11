@@ -9,8 +9,8 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 import { fetchPopularFurniture } from './furniture-api';
-
-// import { openDetailsModal } from './modal-details.js';
+import { setSelectedFurniture } from './data-store.js';
+import { openDetailsModal } from './modal-details.js';
 
 const gallery = document.querySelector('.popular-products-gallery');
 const loader = document.querySelector('.loader');
@@ -114,7 +114,10 @@ function updateNavigationState(swiperInstance, prevBtn, nextBtn) {
 function onDetailsClick(event) {
   const btn = event.target.closest('.gallery-item-info-btn');
   if (!btn) return;
+
   const card = btn.closest('.gallery-item');
   const id = card.dataset.id;
-  openDetailsModal(id);
+
+  setSelectedFurniture(id);
+  openDetailsModal();
 }

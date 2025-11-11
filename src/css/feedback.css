@@ -36,6 +36,7 @@
   padding: 24px 48px 24px 0;
   font-weight: 500;
   font-size: 20px;
+  height: 240px;
 }
 .feedback-author {
   font-weight: 700;
@@ -47,12 +48,20 @@
   .feedbacks {
     padding: 32px 0;
   }
+
+  .feedback-text {
+    height: 220px;
+  }
 }
 
 /* Desktop: 1440px+ */
 @media (min-width: 1440px) {
   .feedbacks {
     padding: 64px 0;
+  }
+
+  .feedback-text {
+    height: 180px;
   }
 }
 .feedbacks .loader {

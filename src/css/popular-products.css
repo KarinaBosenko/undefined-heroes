@@ -11,8 +11,6 @@
 
 .popular-products-gallery {
   margin-bottom: 48px;
-  display: flex;
-  gap: 16px;
 }
 
 .popular-gallery-item {
@@ -37,10 +35,13 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .popular-gallery-item-title {
   font-weight: 600;
+  height: 60px;
 }
 
 .popular-gallery-item-color {

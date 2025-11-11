@@ -171,7 +171,7 @@ export const createGallery = images => {
                 <li class="gallery-item" data-id="${_id}">
                     <img src="${images[0]}" alt="${name}" class="furniture-img"/>
                     <div class="gallery-item-dscr">
-                        <p class="furniture-title">${name}</p>
+                        <p class="furniture-subtitle">${name}</p>
                         <div class="color" data-id="${color}">${colorPick}</div>
                         <p class="price">${price} грн</p>                    
                     </div>

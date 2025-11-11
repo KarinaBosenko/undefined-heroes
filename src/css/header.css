@@ -159,7 +159,6 @@ body.menu-open {
   }
   .nav-menu {
     display: flex;
-    align-items: right;
     justify-content: right;
   }
   .navigation-menu {
